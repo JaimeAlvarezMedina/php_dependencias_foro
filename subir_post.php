@@ -5,10 +5,12 @@
     try{
         $cuerpo=$_POST["cuerpo"];
         $user=$_POST["creador"];
+        $titulo=$_POST["titulo"];
+        $categoria=$_POST["categoria"];
 
         // $texto = implode("//-//",$cuerpo);
 
-        $consulta = ("INSERT INTO articulos(Titulo, Cuerpo, Categoria, User_creador) VALUES ('Prueba','$cuerpo','Nuevo','$user')");/* Hacemos la consulta */
+        $consulta = ("INSERT INTO articulos(Titulo, Cuerpo, Categoria, User_creador) VALUES ('$titulo','$cuerpo','$categoria','$user')");/* Hacemos la consulta */
         $conexion->query($consulta);/* La ejecutamos */
         echo json_encode("Correcto");
     

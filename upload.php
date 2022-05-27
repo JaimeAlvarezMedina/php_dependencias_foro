@@ -20,7 +20,7 @@ $nuevoNameFoto  = 'img-'.$_POST["usuario"].$newNameFoto.'.'.$extension_foto;
 echo json_encode($nuevoNameFoto);
 
 //Verificando si existe el directorio
-$dirLocal = "C:/Users/theki/Desktop/Proyecto_soloyo/src/Pruebas/";
+$dirLocal = "C:/Users/theki/Desktop/Proyecto_soloyo/src/uploads/";
 if (!file_exists($dirLocal)) {
     mkdir($dirLocal, 0777, true);
 }
